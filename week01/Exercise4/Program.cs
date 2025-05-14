@@ -32,7 +32,7 @@ class Program
         Console.WriteLine($"The sum is: {sum}");
 
         double length = numbers.Count;
-        double average = sum/length;
+        double average = sum / length;
         //Console.WriteLine(length);
         Console.WriteLine($"The average is: {average}");
 
@@ -45,5 +45,24 @@ class Program
             }
         }
         Console.WriteLine($"The largest number is: {largest}");
+
+        //Stretch challenge 1
+        int smallest = 10000;
+        foreach (int listnumber in numbers)
+        {
+            if (listnumber < smallest && listnumber > 0)
+            {
+                smallest = listnumber;
+            }
+        }
+        Console.WriteLine($"The smallest positive number is: {smallest}");
+
+        //Stretch challenge 2
+        numbers.Sort();
+        Console.WriteLine("The sorted list is:");
+        foreach (int listnumber in numbers)
+        {
+            Console.WriteLine(listnumber);
+        }
     }
 }
