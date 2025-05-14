@@ -11,6 +11,7 @@ class Program
         //Instance used to get the next integer between 1 to 100
         int magicNumber = randomGenerator.Next(1, 101);
         int guess;
+        int guesses = 0;
 
         Console.WriteLine("Guess the magic number between 1 to 100!");
 
@@ -18,6 +19,7 @@ class Program
         {
             Console.Write("What is your guess? (Type a number): ");
             guess = int.Parse(Console.ReadLine());
+            guesses++;
 
             if (guess > magicNumber)
             {
@@ -32,6 +34,7 @@ class Program
             else if (guess == magicNumber)
             {
                 Console.WriteLine("You guessed the magic number!");
+                Console.WriteLine($"Number of guesses: {guesses}");
             }
         } while (guess != magicNumber);
     }
