@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello World! This is the Exercise1 Project.");
+        Console.WriteLine();
         Console.Write("What is your first name? ");
         string first_name = Console.ReadLine();
         Console.Write("What is your last name? ");
