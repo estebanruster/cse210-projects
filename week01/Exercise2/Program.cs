@@ -10,6 +10,7 @@ class Program
         int grade = int.Parse(Console.ReadLine());
 
         string letterGrade;
+        string plusOrMinus;
 
         if (grade >= 90)
         {
@@ -32,7 +33,29 @@ class Program
             letterGrade = "F";
         }
 
-        Console.WriteLine($"Your grade is {letterGrade}.");
+        int remainder = grade % 10;
+
+        if (letterGrade == "D" || letterGrade == "B" || letterGrade == "C")
+        {
+            if (remainder >= 7)
+            {
+                plusOrMinus = "+";
+            }
+            else if (remainder < 3)
+            {
+                plusOrMinus = "-";
+            }
+            else
+            {
+                plusOrMinus = "";
+            }
+        }
+        else
+        {
+            plusOrMinus = "";
+        }
+
+        Console.WriteLine($"Your grade is {letterGrade}{plusOrMinus}.");
 
         if (letterGrade == "A" || letterGrade == "B" || letterGrade == "C")
         {
