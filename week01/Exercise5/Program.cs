@@ -8,13 +8,13 @@ class Program
 
         DisplayWelcome();
 
-        string name = PromptUserName();
+        string userName = PromptUserName();
 
-        int number = PromptUserNumber();
+        int userNumber = PromptUserNumber();
 
-        int squared = SquareNumber(number);
+        int squared = SquareNumber(userNumber);
 
-        DisplayResult(name, squared);
+        DisplayResult(userName, squared);
 
         Console.WriteLine("End of Program.");
     }
@@ -36,21 +36,21 @@ class Program
     //PromptUserNumber and return the user favorite number as an int.
     static int PromptUserNumber()
     {
-        Console.Write("Please enter your favorite whole number: ");
-        int number = int.Parse(Console.ReadLine());
-        return number;
+        Console.Write("Please enter your favorite number: ");
+        int favoriteNumber = int.Parse(Console.ReadLine());
+        return favoriteNumber;
     }
 
     //SquareNumber accepts an int as a parameter and returns that number squared as an int.
-    static int SquareNumber(int number)
+    static int SquareNumber(int userNumber)
     {
-        int squared = number * number;
+        int squared = userNumber * userNumber;
         return squared;
     }
 
     //DisplayResult accepts the user's name and the squared number and displays them.
-    static void DisplayResult(string name, int squared)
+    static void DisplayResult(string userName, int squared)
     {
-        Console.WriteLine($"{name}, the square of your number is {squared}");
+        Console.WriteLine($"{userName}, the square of your number is {squared}");
     }
 }
