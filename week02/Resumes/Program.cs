@@ -18,13 +18,14 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2025;
 
-        //Display company
+        /*Display company
         Console.WriteLine(job1._company);
         Console.WriteLine(job2._company);
+        */
 
         //calling DisplayJobDetails method of the Job class
-        //job1.DisplayJobDetails();
-        //job2.DisplayJobDetails();
+        job1.DisplayJobDetails();
+        job2.DisplayJobDetails();
 
         /*
         Resume resume = new Resume();
