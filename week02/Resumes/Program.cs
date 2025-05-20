@@ -28,14 +28,13 @@ class Program
         job2.DisplayJobDetails();
         */
 
-        
         Resume resume = new Resume();
-        //resume._name = "Ricardo Guerrero";
+        resume._name = "Ricardo Guerrero";
         resume._jobs.Add(job1);
         resume._jobs.Add(job2);
 
-        Console.WriteLine(resume._jobs[0]._jobTitle);
+        //Console.WriteLine(resume._jobs[0]._jobTitle);
         //calling DisplayResume method of the Resume class
-        //resume.DisplayResume();
+        resume.DisplayResume();
     }
 }

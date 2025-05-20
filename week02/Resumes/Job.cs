@@ -8,7 +8,7 @@ public class Job
     public int _endYear = 0;
 
     //method (member function) to display job details
-    public void DisplayJobDetails()
+    public void DisplayJob()
     {
         Console.WriteLine($"{_jobTitle} ({_company}) {_startYear}-{_endYear}");
     }
