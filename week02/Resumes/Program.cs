@@ -23,18 +23,19 @@ class Program
         Console.WriteLine(job2._company);
         */
 
-        //calling DisplayJobDetails method of the Job class
+        /*calling DisplayJobDetails method of the Job class
         job1.DisplayJobDetails();
         job2.DisplayJobDetails();
+        */
 
-        /*
+        
         Resume resume = new Resume();
-        resume._name = "Ricardo Guerrero";
+        //resume._name = "Ricardo Guerrero";
         resume._jobs.Add(job1);
         resume._jobs.Add(job2);
 
-        //Console.WriteLine(resume._jobs[0]._company);
+        Console.WriteLine(resume._jobs[0]._jobTitle);
         //calling DisplayResume method of the Resume class
-        resume.DisplayResume();*/
+        //resume.DisplayResume();
     }
 }
