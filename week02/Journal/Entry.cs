@@ -10,6 +10,8 @@ public class Entry
     // format, to later use in the DisplayAll method of Journal class
     public void DisplayEntry()
     {
-        
+        Console.WriteLine($"Date: {_dateText} - Prompt: {_prompt}");
+        Console.WriteLine(_entry);
+        Console.WriteLine();
     }
 }
