@@ -1,4 +1,8 @@
-//Creating the PromptGenerator class
+/*
+Author: Esteban Rubén Mangas Calva
+W02 Project: Journal Program
+PromptGenerator class code
+*/
 public class PromptGenerator
 {
     //Member variable prompts list
@@ -8,6 +12,7 @@ public class PromptGenerator
     //because it is later used and saved in the Entry class.
     public string GetRandomPrompt()
     {
+
         return "";
     }
 }

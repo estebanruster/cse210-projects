@@ -1,4 +1,8 @@
-//Creating the Entry class
+/*
+Author: Esteban Rubén Mangas Calva
+W02 Project: Journal Program
+Entry class code
+*/
 public class Entry
 {
     //Creating the member variables _prompt, _entry and _dateText

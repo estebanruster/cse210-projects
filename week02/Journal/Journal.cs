@@ -1,3 +1,8 @@
+/*
+Author: Esteban Rubén Mangas Calva
+W02 Project: Journal Program
+Journal class code
+*/
 public class Journal
 {
     //Creating member variables _fileName and _entries
@@ -23,6 +28,6 @@ public class Journal
 
     public void LoadFromFile(string file)
     {
-        
+
     }
 }
