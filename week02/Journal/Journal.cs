@@ -13,12 +13,18 @@ public class Journal
     //SaveToFile and LoadFromFile the journal
     public void AddEntry(Entry newEntry)
     {
-
+        _entries.Add(newEntry);
     }
 
     public void DisplayAll()
     {
+        //Console.WriteLine($"Name: {_name}");
+        //Console.WriteLine("Jobs:");
 
+        foreach (Entry entry in _entries)
+        {
+            entry.DisplayEntry();
+        }
     }
 
     public void SaveToFile(string file)

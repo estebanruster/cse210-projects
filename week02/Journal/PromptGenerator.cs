@@ -23,7 +23,7 @@ public class PromptGenerator
         _prompts.Add("What was the funniest thing that happened today?");
         //Instance used to get the next integer between 0 to 5 of the list index
         int randomIndex = randomGenerator.Next(0, 6);
-        Console.WriteLine(randomIndex);
+        //Console.WriteLine(randomIndex);
         return _prompts[randomIndex];
     }
 }
