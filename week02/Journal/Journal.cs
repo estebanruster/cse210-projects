@@ -3,10 +3,10 @@ Author: Esteban Rubén Mangas Calva
 W02 Project: Journal Program
 Journal class code
 */
+using System.IO;
 public class Journal
 {
-    //Creating member variables _fileName and _entries
-    public string _fileName = "";
+    //Creating member variable _entries
     public List<Entry> _entries = new List<Entry>();
 
     //Creating the methods to AddEntry in the list, DisplayAll the journal
@@ -18,9 +18,6 @@ public class Journal
 
     public void DisplayAll()
     {
-        //Console.WriteLine($"Name: {_name}");
-        //Console.WriteLine("Jobs:");
-
         foreach (Entry entry in _entries)
         {
             entry.DisplayEntry();
@@ -29,7 +26,15 @@ public class Journal
 
     public void SaveToFile(string file)
     {
-
+        using (StreamWriter outputfile = new StreamWriter(file))
+        {
+            foreach (Entry entry in _entries)
+            {
+                outputfile.WriteLine($"Date: {entry._dateText} - Prompt: {entry._prompt}");
+                outputfile.WriteLine(entry._entry);
+                outputfile.WriteLine();
+            }
+        }
     }
 
     public void LoadFromFile(string file)
