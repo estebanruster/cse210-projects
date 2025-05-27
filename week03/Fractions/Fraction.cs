@@ -47,4 +47,17 @@ public class Fraction
     {
         _bottom = bottom;
     }
+
+    //Creating methods to return the fractions as a fraction and as a
+    //decimal
+    public string GetFractionString()
+    {
+        return $"{_top.ToString()}/{_bottom.ToString()}";
+    }
+    public double GetDecimalValue()
+    {
+        double doubleTop = Convert.ToDouble(_top);
+        double doubleBottom = Convert.ToDouble(_bottom);
+        return doubleTop / doubleBottom;
+    }
 }
