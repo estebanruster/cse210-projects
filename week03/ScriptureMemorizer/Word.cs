@@ -31,6 +31,18 @@ public class Word
     }
     public string GetDisplayText()
     {
-        return "";
+        string displayText = "";
+        if (_isHidden == false)
+        {
+            displayText = _text;
+        }
+        else
+        {
+            for (int i = 0; i < _text.Length; i++)
+            {
+                displayText = displayText + "_";
+            }
+        }
+        return displayText;
     }
 }
