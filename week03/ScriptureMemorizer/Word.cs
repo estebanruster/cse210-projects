@@ -19,11 +19,11 @@ public class Word
     //return the string to display the word or the blank (show or hide)
     public void Hide()
     {
-
+        _isHidden = true;
     }
     public void Show()
     {
-
+        _isHidden = false;
     }
     public bool IsHidden()
     {

@@ -25,7 +25,46 @@ public class Scripture
     //Scripture IsCompletelyHidden
     public void HideRandomWords()
     {
+        int numberToHide = 6;
+        int lastIndex = _words.Count - 1;
+        int countShown = 0;
+        int countHidden = 0;
+        //Loop that counts and verify how many words are shown
+        foreach (Word word in _words)
+        {
+            //bool hidden = word.IsHidden();
+            if (word.IsHidden() == false)
+            {
+                countShown++;
+            }
+        }
 
+        if (numberToHide < countShown)
+        {
+            while (countHidden != numberToHide)
+            {
+                //Random class instance created
+                Random randomGenerator = new Random();
+                //Instance used to get the next integer between the indexes of the List<Word>
+                int indexToHide = randomGenerator.Next(0, lastIndex);
+                //Condition to Hide only random words shown
+                if (_words[indexToHide].IsHidden() == false)
+                {
+                    _words[indexToHide].Hide();
+                    countHidden++;
+                }
+            }
+        }
+        else if (numberToHide >= countShown)
+        {
+            foreach (Word word in _words)
+            {
+                if (word.IsHidden() == false)
+                {
+                    word.Hide();
+                }
+            }
+        }
     }
     public string GetDisplayText()
     {
@@ -40,7 +79,23 @@ public class Scripture
     }
     public bool IsCompletelyHidden()
     {
+        int wordTotal = _words.Count;
+        int countHidden = 0;
+        bool completelyHidden = false;
+        //Loop to check if every word is hidden
+        foreach (Word word in _words)
+        {
+            //bool hidden = word.IsHidden();
+            if (word.IsHidden() == true)
+            {
+                countHidden++;
+            }
+        }
+        if (countHidden == wordTotal)
+        {
+            completelyHidden = true;
+        }
         //IsCompletelyHidden, so it's true
-        return true;
+        return completelyHidden;
     }
 }
