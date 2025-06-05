@@ -9,6 +9,7 @@ public class Comment
     //the comment
     public void DisplayComment()
     {
-        
+        Console.WriteLine(_name);
+        Console.WriteLine(_text);
     }
 }
