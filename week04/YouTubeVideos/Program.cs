@@ -1,3 +1,9 @@
+/*
+Author: Esteban Rubén Mangas Calva
+W04 Assignment: YouTube Video Program
+Abstraction principle
+*/
+
 using System;
 
 class Program
