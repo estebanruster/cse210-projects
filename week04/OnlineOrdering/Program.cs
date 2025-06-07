@@ -28,7 +28,7 @@ class Program
         Address address2 = new Address("North Street 144", "Terrance", "Missuri", "USA");
         Customer customer2 = new Customer("Sara Calderón", address2);
         Order order2 = new Order(customer2);
-        Product product11 = new Product("Camara", 000091, 99, 2);
+        Product product11 = new Product("Camara", 100091, 99, 2);
         order2.AddProduct(product11);
         Product product12 = new Product("Micro SD memory card", 202048, 19, 5);
         order2.AddProduct(product12);
