@@ -17,15 +17,15 @@ public class Product
         _quantity = quantity;
     }
 
-    //GetDsiplayProduct method returns string of the product for the
+    //GetDisplayProduct method returns string of the product for the
     //GetPackingLabel Order method and TotalProduct calculate the total
     //of the product and returns it for TotalOrder Order method
-    public string GetDsiplayProduct()
+    public string GetDisplayProduct()
     {
-        return "";
+        return $"Product: {_name} | Id:{_id}";
     }
     public int TotalProduct()
     {
-        return 0;
+        return _price * _quantity;
     }
 }

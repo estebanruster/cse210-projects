@@ -22,10 +22,17 @@ public class Address
     //string for the GetDisplayCustomer Customer method
     public bool CountryUSA()
     {
-        return true;
+        if (_country == "USA")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     public string GetDisplayAddress()
     {
-        return "";
+        return $"{_streetAddress}\n{_city}, {_stateOrProvince}\n{_country}";
     }
 }

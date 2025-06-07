@@ -14,7 +14,7 @@ public class Order
     }
     public void AddProduct(Product newProduct)
     {
-
+        _products.Add(newProduct);
     }
 
     //Methods to calculate the TotalOrder with TotalProduct method from
@@ -22,14 +22,32 @@ public class Order
     //in Product and Customer
     public int TotalOrder()
     {
-        return 0;
+        int total = 0;
+        foreach (Product product in _products)
+        {
+            total = total + product.TotalProduct();
+        }
+        if (_customer.LivesInTheUSA() == true)
+        {
+            total = total + 5;
+        }
+        else
+        {
+            total = total + 35;
+        }
+        return total;
     }
     public string GetPackingLabel()
     {
-        return "";
+        string packingLabel = "";
+        foreach (Product product in _products)
+        {
+            packingLabel = packingLabel + $"{product.GetDisplayProduct()}\n";
+        }
+        return packingLabel;
     }
     public string GetShippingLabel()
     {
-        return "";
+        return _customer.GetDisplayCustomer();
     }
 }

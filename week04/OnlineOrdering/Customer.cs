@@ -19,10 +19,10 @@ public class Customer
     //return bool to calculate TotalOrder due to shipping fee diferences
     public string GetDisplayCustomer()
     {
-        return "";
+        return $"{_name}\n{_address.GetDisplayAddress()}";
     }
     public bool LivesInTheUSA()
     {
-        return true;
+        return _address.CountryUSA();
     }
 }
