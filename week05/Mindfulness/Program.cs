@@ -1,3 +1,9 @@
+/*
+Author: Esteban Rubén Mangas Calva
+W05 Project: Mindfulness Program
+Inheritance principle
+*/
+
 using System;
 
 class Program
