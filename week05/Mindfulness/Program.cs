@@ -19,6 +19,7 @@ class Program
         Console.Clear();
         BreathingActivity breathingActivity = new BreathingActivity();
         ReflectingActivity reflectingActivity = new ReflectingActivity();
+        ListingActivity listingActivity = new ListingActivity();
         //Menu for the mindfulnes program
         //Activity activity = new Activity();
         string menu;
@@ -39,8 +40,6 @@ class Program
                 breathingActivity.DisplayStartingMessage();
                 breathingActivity.Run();
                 breathingActivity.DisplayEndingMessage();
-                //Console.WriteLine("Breathing");
-                //activity.ShowCountDown();
             }
             else if (menu == "2")
             {
@@ -52,9 +51,9 @@ class Program
             else if (menu == "3")
             {
                 Console.Clear();
-                Console.WriteLine("Listing");
-                //activity.ShowCountDown();
-                //activity.ShowSpinner();
+                listingActivity.DisplayStartingMessage();
+                listingActivity.Run();
+                listingActivity.DisplayEndingMessage();
             }
             else if (menu == "4")
             {
