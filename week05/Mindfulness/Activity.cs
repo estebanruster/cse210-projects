@@ -19,9 +19,15 @@ public class Activity
         Console.WriteLine();
         Console.Write("How long, in seconds, would you like for your session? ");
         _time = int.Parse(Console.ReadLine());
+        Console.Clear();
+        Console.WriteLine("Get ready...");
+        ShowSpinner();
     }
     public void DisplayEndingMessage()
     {
+        Console.WriteLine();
+        Console.WriteLine("Well done!!");
+        Console.WriteLine();
         Console.WriteLine($"You have completed another {_time} seconds of the {_name} Activity.");
         ShowSpinner();
         Console.Clear();
@@ -41,7 +47,7 @@ public class Activity
         ];
 
         DateTime startTime = DateTime.Now;
-        DateTime futureTime = startTime.AddSeconds(6);
+        DateTime futureTime = startTime.AddSeconds(10);
 
         int i = 0;
 

@@ -14,9 +14,9 @@ public class BreathingActivity : Activity
     //Run method that contains the coding of the activity working
     public void Run()
     {
-        Console.Clear();
-        Console.WriteLine("Get ready...");
-        ShowSpinner();
+        //Console.Clear();
+        //Console.WriteLine("Get ready...");
+        //ShowSpinner();
 
         DateTime startTime = DateTime.Now;
         DateTime futureTime = startTime.AddSeconds(_time);
@@ -30,7 +30,7 @@ public class BreathingActivity : Activity
             ShowCountDown();
             Console.WriteLine();
         }
-        Console.WriteLine();
-        Console.WriteLine("Well done!!");
+        //Console.WriteLine();
+        //Console.WriteLine("Well done!!");
     }
 }
