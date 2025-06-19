@@ -9,16 +9,16 @@ public class EternalGoal : Goal
     }
     
     //Override methods from the abstract ones
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-        throw new NotImplementedException();
+        return int.Parse(GetPoints());
     }
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return false;
     }
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        return $"EternalGoal:{GetShortName()}|{GetDescription()}|{GetPoints()}";
     }
 }

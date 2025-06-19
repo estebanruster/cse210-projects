@@ -23,20 +23,41 @@ public class ChecklistGoal : Goal
     }
 
     //Override methods from the abstract ones and the virtual one
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-        throw new NotImplementedException();
+        _amountCompleted++;
+        if (_amountCompleted < _target)
+        {
+            return int.Parse(GetPoints());
+        }
+        else if (_amountCompleted == _target)
+        {
+            return int.Parse(GetPoints()) + _bonus;
+        }
+        else
+        {
+            _amountCompleted = _target;
+            Console.WriteLine("Target reached; no more events can be recorded");
+            return 0;
+        }
     }
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        if (_amountCompleted == _target)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
     public override string GetDetailsString()
     {
-        return base.GetDetailsString();
+        return $"{GetShortName()} ({GetDescription()}) -- Currently completed: {_amountCompleted}/{_target}";
     }
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        return $"ChecklistGoal:{GetShortName()}|{GetDescription()}|{GetPoints()}|{_bonus}|{_target}|{_amountCompleted}";
     }
 }

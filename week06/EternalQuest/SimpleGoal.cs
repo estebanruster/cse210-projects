@@ -17,16 +17,25 @@ public class SimpleGoal : Goal
     }
 
     //Override methods from the abstract ones
-    public override void RecordEvent()
+    public override int RecordEvent()
     {
-        throw new NotImplementedException();
+        if (_isComplete == false)
+        {
+            _isComplete = true;
+            return int.Parse(GetPoints());
+        }
+        else
+        {
+            Console.WriteLine("Goal acomplished; no more events can be recorded");
+            return 0;
+        }
     }
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return _isComplete;
     }
     public override string GetStringRepresentation()
     {
-        throw new NotImplementedException();
+        return $"SimpleGoal:{GetShortName()}|{GetDescription()}|{GetPoints()}|{_isComplete}";
     }
 }

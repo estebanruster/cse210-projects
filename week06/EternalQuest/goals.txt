@@ -1,0 +1,6 @@
+1475
+EternalGoal:Pray in the morning|To pray each morning as I wake up|50
+EternalGoal:Read the scripures|Read the scriptures everyday at least 10 min|60
+SimpleGoal:Finish this project|To finish W06 polymorphism project|350|True
+ChecklistGoal:Do excercise|Do excercise in the morning|75|750|5|5
+ChecklistGoal:Read the scriptures this week|Track if I acomplished it this week|50|1000|7|0
